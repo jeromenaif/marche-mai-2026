@@ -1,0 +1,266 @@
+// GR 223 — Mai 2026 · trek configuration
+// One entry per day. Days without a GPX file render as "à venir" placeholders.
+
+window.TREK = {
+  name: 'GR 223',
+  subtitle: 'Mai 2026',
+  // Used to compute weekday names and date labels.
+  startDate: '2026-05-05', // Day 1 = mardi 5 mai 2026
+
+  // Palette: 21 distinct, harmonious hues (oklch ~58% L, 0.13 C, evenly spaced).
+  // Same lightness across all so no day looks more important than another.
+  palette: [
+    '#c4544f', // 01 brique
+    '#c4683a', // 02 cuivre
+    '#bf7a1f', // 03 ocre
+    '#b08a1f', // 04 moutarde
+    '#999421', // 05 olive
+    '#7c9826', // 06 mousse
+    '#5e9836', // 07 vert prairie
+    '#459451', // 08 vert sapin
+    '#339067', // 09 jade
+    '#2e8b7c', // 10 sarcelle profonde
+    '#318690', // 11 sarcelle
+    '#3a7e9c', // 12 bleu acier
+    '#4974a7', // 13 bleu manche
+    '#5b69ab', // 14 outremer
+    '#715dab', // 15 violet
+    '#8851a5', // 16 prune
+    '#9c4798', // 17 améthyste
+    '#ad4486', // 18 magenta
+    '#b44671', // 19 framboise
+    '#b54c5b', // 20 grenadine
+    '#b15649', // 21 rouille
+  ],
+
+  days: [
+    { num: 1, from: 'De Panne', to: 'Bergues', weather: null, gpx: 'data/01-de-panne-bergues.gpx',
+      photos: [
+        { file: 'photos/jour-01/01.jpg', km: 0.0,  caption: 'Devant la porte · départ à De Panne' },
+        { file: 'photos/jour-01/02.jpg', km: 0.5,  caption: 'Statue de Léopold Ier · « Koning van België », arrivée en Belgique en 1831' },
+        { file: 'photos/jour-01/03.jpg', km: 0.8,  caption: '« Ideally you would sea where to… » · drapeau sur la plage' },
+        { file: 'photos/jour-01/04.jpg', km: 1.0,  caption: 'Selfie père-fils sur la plage de De Panne' },
+        { file: 'photos/jour-01/05.jpg', km: 2.0,  caption: 'Balisage Kustwandelroute · GR 5A · GR 120 · sentier européen E9' },
+        { file: 'photos/jour-01/06.jpg', km: 6.0,  caption: 'Estran à marée basse, ciel pommelé' },
+        { file: 'photos/jour-01/07.jpg', km: 10.0, caption: 'Dunes et oyats · approche de la frontière française' },
+        { file: 'photos/jour-01/08.jpg', km: 18.0, caption: 'Bateau-feu rouge · port de Dunkerque' },
+        { file: 'photos/jour-01/09.jpg', km: 19.0, caption: 'Trois-mâts « Duchesse Anne » · beffroi de Dunkerque en fond' },
+        { file: 'photos/jour-01/10.jpg', km: 20.0, caption: 'Façade orientaliste des « Bains Dunkerquois »' },
+        { file: 'photos/jour-01/11.jpg', km: 24.0, caption: '« Sentier de Belgique » · Coudekerque-Branche' },
+        { file: 'photos/jour-01/12.jpg', km: 32.0, caption: 'Tour-clocher et place pavée · approche de Bergues' },
+        { file: 'photos/jour-01/13.jpg', km: 32.5, caption: 'Borne D 916 · « Bergues · alt mini 4 m, maxi 22 m »' },
+      ],
+    },
+    { num: 2, from: 'Bergues', to: 'Gravelines', weather: 'mixed', weatherNote: '12 °C, ciel variable, vent 20–25 km/h',
+      gpx: 'data/02-bergues-gravelines.gpx',
+      photos: [
+        { file: 'photos/jour-02/01.jpg', km: 0.1, caption: 'Les Capucins · maison d\u2019hôtes à Bergues (départ)' },
+        { file: 'photos/jour-02/02.jpg', km: 0.2, caption: 'Météo de Bergues · 12 °C, ciel variable' },
+        { file: 'photos/jour-02/03.jpg', km: 0.5, caption: 'Porte fortifiée de Bergues, drapeau flamand' },
+        { file: 'photos/jour-02/07.jpg', km: 0.7, caption: 'Beffroi de Bergues sous un ciel d\u2019ardoise' },
+        { file: 'photos/jour-02/04.jpg', km: 6.0, caption: 'Petit pont de pierre sur le ruisseau, saule pleureur' },
+        { file: 'photos/jour-02/05.jpg', km: 18.0, caption: 'Canal de Bourbourg · longue ligne de fuite' },
+        { file: 'photos/jour-02/06.jpg', km: 22.0, caption: 'Sandwich mérité · jambon, fromage, tomate, salade' },
+      ],
+    },
+    { num: 3, from: 'Gravelines', to: 'Calais', weather: null, gpx: 'data/03-gravelines-calais.gpx',
+      photos: [
+        { file: 'photos/jour-03/01.jpg', km: 1.0,  caption: 'Phare de Petit-Fort-Philippe · départ du chenal' },
+        { file: 'photos/jour-03/02.jpg', km: 3.0,  caption: 'Carrefour du GR 120 · Platier d\u2019Oye / Grand-Fort-Philippe' },
+        { file: 'photos/jour-03/03.jpg', km: 8.0,  caption: 'Crapaud commun sur le sentier mouillé' },
+        { file: 'photos/jour-03/04.jpg', km: 12.0, caption: 'Estran sans fin · ciel d\u2019orage sur le Platier d\u2019Oye' },
+        { file: 'photos/jour-03/05.jpg', km: 22.0, caption: 'Coquelicots au bord de la route' },
+        { file: 'photos/jour-03/06.jpg', km: 27.0, caption: 'Phare de Calais à contre-jour' },
+        { file: 'photos/jour-03/07.jpg', km: 28.0, caption: '« Baguette Banette / Poolish / Tradition » · boulangerie de Calais' },
+      ],
+    },
+    { num: 4, from: 'Calais', to: 'Boulogne-sur-Mer', weather: null, gpx: 'data/04-calais-boulogne.gpx',
+      photos: [
+        { file: 'photos/jour-04/01.jpg', km: 0.5,  caption: 'Coucher de soleil sur les cabines blanches · plage de Calais (matin de départ)' },
+        { file: 'photos/jour-04/02.jpg', km: 1.0,  caption: 'Hôtel-Restaurant de la Plage · Calais' },
+        { file: 'photos/jour-04/03.jpg', km: 1.5,  caption: 'Les Bourgeois de Calais (Rodin) devant le beffroi de l\u2019hôtel de ville' },
+        { file: 'photos/jour-04/04.jpg', km: 2.0,  caption: '« Calais La Plage » · sculpture cœur ailé avec distances aux villes du monde' },
+        { file: 'photos/jour-04/05.jpg', km: 2.5,  caption: 'Cabine de plage en cadre · vue encadrée sur la mer' },
+        { file: 'photos/jour-04/06.jpg', km: 3.0,  caption: 'Ferry DFDS au large · entre deux cabines' },
+        { file: 'photos/jour-04/07.jpg', km: 10.0, caption: 'Vers le Cap Blanc-Nez · sentier sur la falaise crayeuse' },
+        { file: 'photos/jour-04/08.jpg', km: 14.0, caption: 'Phare du Cap Blanc-Nez vu depuis les champs' },
+        { file: 'photos/jour-04/09.jpg', km: 19.0, caption: 'Pavot de Californie (eschscholzia) sur le sentier' },
+        { file: 'photos/jour-04/10.jpg', km: 22.0, caption: 'Plage de Wissant · dunes de la Côte d\u2019Opale' },
+        { file: 'photos/jour-04/11.jpg', km: 28.0, caption: 'Armérie maritime en pleine floraison · falaises du Cap Gris-Nez' },
+        { file: 'photos/jour-04/12.jpg', km: 28.5, caption: 'Estran rocheux sous les falaises · armérie en bordure' },
+        { file: 'photos/jour-04/13.jpg', km: 33.0, caption: 'Audresselles · maisons au-dessus de l\u2019estran rocheux' },
+        { file: 'photos/jour-04/14.jpg', km: 36.0, caption: 'Fort d\u2019Ambleteuse (Vauban) face à la Manche' },
+        { file: 'photos/jour-04/15.jpg', km: 38.0, caption: 'Passerelle en bois à travers les dunes boisées' },
+        { file: 'photos/jour-04/16.jpg', km: 44.0, caption: 'Villas Belle Époque colorées · digue de Wimereux' },
+      ],
+    },
+    { num: 5, from: 'Boulogne-sur-Mer', to: 'Le Touquet', weather: null, gpx: 'data/05-boulogne-le-touquet.gpx',
+      photos: [
+        { file: 'photos/jour-05/01.jpg', km: 0.1,  caption: '21 rue Saint-Jean · « La main à la pâte » · départ Boulogne' },
+        { file: 'photos/jour-05/03.jpg', km: 0.4,  caption: 'Beffroi de Boulogne sous les pavoisements' },
+        { file: 'photos/jour-05/02.jpg', km: 0.6,  caption: 'Goéland argenté · ville haute de Boulogne' },
+        { file: 'photos/jour-05/04.jpg', km: 4.0,  caption: 'Voilier au loin · vue de la digue' },
+        { file: 'photos/jour-05/05.jpg', km: 6.0,  caption: 'Phare d\u2019Alprech à contre-jour · Le Portel' },
+        { file: 'photos/jour-05/06.jpg', km: 14.0, caption: 'Cabines bleues et blanches · Hardelot' },
+        { file: 'photos/jour-05/07.jpg', km: 22.0, caption: '« Strictement interdit de tirer en direction des maisons » · panneau cocasse' },
+        { file: 'photos/jour-05/08.jpg', km: 28.0, caption: 'Statue de bronze (le voyageur déchiré) · approche d\u2019Étaples' },
+      ],
+    },
+    { num: 6, from: 'Le Touquet', to: 'Fort-Mahon-Plage', weather: null, gpx: 'data/06-le-touquet-fort-mahon.gpx',
+      photos: [
+        { file: 'photos/jour-06/01.jpg', km: 0.1,  caption: '« Bienvenue à Le Touquet Paris-Plage » · départ' },
+        { file: 'photos/jour-06/02.jpg', km: 0.5,  caption: 'Avenue du Bois · chambres d\u2019hôtes' },
+        { file: 'photos/jour-06/03.jpg', km: 1.0,  caption: 'Drapeaux européens face à la plage' },
+        { file: 'photos/jour-06/04.jpg', km: 2.0,  caption: 'Cabines blanches face à l\u2019estran' },
+        { file: 'photos/jour-06/05.jpg', km: 3.5,  caption: 'Ombre du randonneur sur le sable' },
+        { file: 'photos/jour-06/06.jpg', km: 5.0,  caption: 'Coquillages sur la plage' },
+        { file: 'photos/jour-06/07.jpg', km: 8.0,  caption: 'Mise à l\u2019eau des chars à voile · tracteur sur l\u2019estran' },
+        { file: 'photos/jour-06/08.jpg', km: 8.3,  caption: 'Alignement de chars à voile « Seagull »' },
+        { file: 'photos/jour-06/09.jpg', km: 8.6,  caption: 'Char à voile vert et bleu · mouette en figure' },
+        { file: 'photos/jour-06/10.jpg', km: 11.0, caption: 'Régate sur l\u2019estran de Berck' },
+        { file: 'photos/jour-06/11.jpg', km: 11.5, caption: 'Voiles jaunes et orange en ligne' },
+        { file: 'photos/jour-06/12.jpg', km: 12.5, caption: '#BERCK SUR MER · grandes lettres sur le sable' },
+        { file: 'photos/jour-06/13.jpg', km: 16.0, caption: 'Aubépine blanche en pleine floraison' },
+        { file: 'photos/jour-06/14.jpg', km: 19.0, caption: 'Iris des marais (Iris pseudacorus)' },
+        { file: 'photos/jour-06/15.jpg', km: 22.0, caption: 'L\u2019Authie · franchissement vers la Somme' },
+        { file: 'photos/jour-06/16.jpg', km: 30.0, caption: 'Chaussures de marche au retour à l\u2019hôtel' },
+      ],
+    },
+    { num: 7, from: 'Fort-Mahon-Plage', to: 'Saint-Valéry-sur-Somme', weather: null, gpx: 'data/07-fort-mahon-st-valery.gpx',
+      photos: [
+        { file: 'photos/jour-07/01.jpg', km: 1.0,  caption: 'Plage et dunes au départ de Fort-Mahon' },
+        { file: 'photos/jour-07/02.jpg', km: 3.0,  caption: '« Warning · Gravelots en danger » — réserve de nidification' },
+        { file: 'photos/jour-07/03.jpg', km: 5.0,  caption: 'Plume blanche posée dans le sable' },
+        { file: 'photos/jour-07/04.jpg', km: 7.0,  caption: 'Empreintes vers la mer' },
+        { file: 'photos/jour-07/05.jpg', km: 9.0,  caption: 'Dunes du Marquenterre sous un ciel chargé' },
+        { file: 'photos/jour-07/06.jpg', km: 12.0, caption: 'Sentier bitumé à travers les prairies' },
+        { file: 'photos/jour-07/07.jpg', km: 15.0, caption: 'Ciel strié au-dessus des polders' },
+        { file: 'photos/jour-07/08.jpg', km: 22.0, caption: '« Au Vent du Large » · entrée du Crotoy' },
+        { file: 'photos/jour-07/09.jpg', km: 23.0, caption: 'Tourelle Belle Époque · Le Crotoy' },
+        { file: 'photos/jour-07/10.jpg', km: 24.0, caption: 'Hôtel Les Tourelles · Le Crotoy' },
+        { file: 'photos/jour-07/11.jpg', km: 25.0, caption: 'Hôtel La Terrasse · Le Homard Gourmand · Le Crotoy' },
+        { file: 'photos/jour-07/12.jpg', km: 34.0, caption: '« Pivoine & Giroflée » · maison rose au bord de la Somme' },
+        { file: 'photos/jour-07/13.jpg', km: 35.5, caption: 'Cabane de chasse de l\u2019autre côté du chenal' },
+        { file: 'photos/jour-07/14.jpg', km: 37.0, caption: 'Façade « La Baie de Somme » · Saint-Valéry, vieille ville' },
+        { file: 'photos/jour-07/15.jpg', km: 38.5, caption: 'Panneau d\u2019entrée · Saint-Valéry-sur-Somme' },
+      ],
+    },
+    {
+      num: 8,
+      from: 'Saint-Valéry-sur-Somme',
+      to: 'Le Tréport',
+      weather: 'sun',
+      weatherNote: 'Soleil, ciel dégagé',
+      // The original upload uses combining-diacritic file names; we keep the literal
+      // ref because the project sandbox can't rewrite those file names.
+      gpx: 'data/08-st-valery-le-treport.gpx',
+      photos: [
+        { file: 'photos/jour-08/06.jpg', km: 0.0,  caption: 'Hôtel La Colonne de Bronze · Saint-Valéry-sur-Somme' },
+        { file: 'photos/jour-08/07.jpg', km: 0.2,  caption: 'Plaque de cocher G.C. n°204 vers Le Hourdel' },
+        { file: 'photos/jour-08/08.jpg', km: 0.4,  caption: 'Vélos rouges sur le quai' },
+        { file: 'photos/jour-08/09.jpg', km: 0.6,  caption: 'Feu vert du port · vue sur la Baie de Somme' },
+        { file: 'photos/jour-08/10.jpg', km: 8.0,  caption: 'Cabines face à la baie · Le Hourdel' },
+        { file: 'photos/jour-08/11.jpg', km: 8.2,  caption: 'Phare du Hourdel' },
+        { file: 'photos/jour-08/12.jpg', km: 13.0, caption: 'Phare de Cayeux-sur-Mer' },
+        { file: 'photos/jour-08/13.jpg', km: 13.5, caption: 'L\u2019alignement des cabines · Cayeux-sur-Mer' },
+        { file: 'photos/jour-08/14.jpg', km: 14.0, caption: 'Cabines de Cayeux, premier plan' },
+        { file: 'photos/jour-08/15.jpg', km: 14.5, caption: 'Cabine orange à l\u2019ancre · Cayeux' },
+        { file: 'photos/jour-08/16.jpg', km: 16.0, caption: '« Naturisme autorisé · 1 km sur l\u2019estran » · Hâble d\u2019Ault' },
+        { file: 'photos/jour-08/17.jpg', km: 19.0, caption: 'Champ de lin en fleur' },
+        { file: 'photos/jour-08/18.jpg', km: 22.0, caption: 'Falaises et casino d\u2019Ault' },
+        { file: 'photos/jour-08/03.jpg', km: 24.0, caption: 'Montée vers la falaise' },
+        { file: 'photos/jour-08/19.jpg', km: 25.0, caption: 'Troupeau de laitières en pâture' },
+        { file: 'photos/jour-08/20.jpg', km: 27.0, caption: 'Falaises blanches · Bois-de-Cise' },
+        { file: 'photos/jour-08/02.jpg', km: 28.0, caption: 'Échalier du sentier du littoral' },
+        { file: 'photos/jour-08/01.jpg', km: 33.5, caption: 'Villas Belle Époque · Mers-les-Bains' },
+        { file: 'photos/jour-08/04.jpg', km: 34.2, caption: 'Francillon & L\u2019Aiglon · Mers-les-Bains' },
+        { file: 'photos/jour-08/05.jpg', km: 34.7, caption: 'Villa Clair de Lune · Mers-les-Bains' },
+      ],
+    },
+    { num: 9, from: 'Le Tréport', to: 'Dieppe', weather: null, gpx: 'data/09-le-treport-dieppe.gpx',
+      photos: [
+        { file: 'photos/jour-09/01.jpg', km: 0.1,  caption: 'Hôtel Le Saint-Yves · départ au Tréport' },
+        { file: 'photos/jour-09/02.jpg', km: 0.4,  caption: 'Vue arrière sur Mers-les-Bains depuis la jetée' },
+        { file: 'photos/jour-09/04.jpg', km: 0.5,  caption: 'Phare vert de la jetée du Tréport' },
+        { file: 'photos/jour-09/06.jpg', km: 0.5,  caption: 'Phare vert · contre-plongée' },
+        { file: 'photos/jour-09/03.jpg', km: 0.6,  caption: 'Galets et écume au pied de la digue' },
+        { file: 'photos/jour-09/05.jpg', km: 0.8,  caption: 'Plage du Tréport, falaises blanches en fond' },
+        { file: 'photos/jour-09/08.jpg', km: 1.0,  caption: 'Drapeau normand sur la tour de l\u2019horloge' },
+        { file: 'photos/jour-09/07.jpg', km: 1.3,  caption: '« Escaliers des Falaises » · accès au GR 21' },
+        { file: 'photos/jour-09/09.jpg', km: 1.4,  caption: '« Je les aime bien les n\u2019importe quoi » · Graf Flower' },
+        { file: 'photos/jour-09/10.jpg', km: 1.6,  caption: 'Montée des escaliers vers la falaise' },
+        { file: 'photos/jour-09/11.jpg', km: 5.0,  caption: 'Poteau directionnel · Paris 150, Bruxelles 230, Hastings 105' },
+        { file: 'photos/jour-09/12.jpg', km: 8.0,  caption: '« Présence de randonneurs » · route des falaises' },
+        { file: 'photos/jour-09/13.jpg', km: 12.0, caption: 'Cabines de plage colorées sous la falaise · Criel-sur-Mer' },
+        { file: 'photos/jour-09/14.jpg', km: 16.0, caption: 'Bourrache en fleur sur le sentier' },
+        { file: 'photos/jour-09/15.jpg', km: 19.0, caption: 'Boule de neige (viorne obier) blanche' },
+        { file: 'photos/jour-09/16.jpg', km: 22.0, caption: 'Aubépine rose en pleine floraison' },
+        { file: 'photos/jour-09/17.jpg', km: 30.0, caption: 'Ciel d\u2019orage sur les falaises · approche de Dieppe' },
+        { file: 'photos/jour-09/18.jpg', km: 36.5, caption: 'Chalutiers à quai · « L\u2019Avenir Dieppe » · port de Dieppe' },
+      ],
+    },
+    { num: 10, from: 'Dieppe', to: 'Veules-les-Roses', weather: null, gpx: 'data/10-dieppe-veules-les-roses.gpx',
+      photos: [
+        { file: 'photos/jour-10/01.jpg', km: 0.1,  caption: 'Hôtel Grand Duquesne · rue de Sygogne, Dieppe (départ)' },
+        { file: 'photos/jour-10/02.jpg', km: 0.2,  caption: 'Street art « Sens interdit · pêcheur » de Clet · rue de Dieppe' },
+        { file: 'photos/jour-10/03.jpg', km: 0.4,  caption: 'Street art « Sens interdit · porteur de barre » de Clet · centre Dieppe' },
+        { file: 'photos/jour-10/04.jpg', km: 0.7,  caption: 'Mur de brique fleuri · érigéron de Karvinsky et campanule des murs' },
+        { file: 'photos/jour-10/05.jpg', km: 1.5,  caption: 'Drapeau normand (lions léopardés) sous ciel bleu · ville haute de Dieppe' },
+        { file: 'photos/jour-10/06.jpg', km: 2.5,  caption: 'Falaises ouest de Dieppe · ciel d\u2019orage et mer agitée' },
+        { file: 'photos/jour-10/07.jpg', km: 4.0,  caption: 'Villa Belle Époque en brique polychrome · Pourville-sur-Mer' },
+        { file: 'photos/jour-10/08.jpg', km: 5.0,  caption: 'Panneau « GR 21 · La Mer · La Terre » peint à la main' },
+        { file: 'photos/jour-10/09.jpg', km: 5.5,  caption: 'Cabines pastel alignées face à la mer · Pourville' },
+        { file: 'photos/jour-10/10.jpg', km: 6.0,  caption: 'Drapeaux orange et noir de pêcheurs (DP 929 608 · Jourdan) sur le port' },
+        { file: 'photos/jour-10/11.jpg', km: 8.0,  caption: 'Deux arbres tordus par le vent · vue sur la Manche' },
+        { file: 'photos/jour-10/12.jpg', km: 9.5,  caption: 'Phare d\u2019Ailly · Sainte-Marguerite-sur-Mer (dôme vert)' },
+        { file: 'photos/jour-10/13.jpg', km: 11.0, caption: 'Longue maison à colombages normande · ferme du Vasterival' },
+        { file: 'photos/jour-10/14.jpg', km: 12.0, caption: 'Manoir anglo-normand jaune et noir · Sainte-Marguerite' },
+        { file: 'photos/jour-10/15.jpg', km: 14.0, caption: 'Compagnons rouges (Silene dioica) en bord de sentier' },
+        { file: 'photos/jour-10/16.jpg', km: 16.0, caption: 'Panneau métallique « LA MER » · indication de hameau' },
+        { file: 'photos/jour-10/17.jpg', km: 19.0, caption: 'Balisage GR jaune-blanc-rouge sur piquet · Quiberville en vue' },
+        { file: 'photos/jour-10/18.jpg', km: 22.0, caption: 'Anthémis des teinturiers (marguerites dorées) sur le talus' },
+        { file: 'photos/jour-10/19.jpg', km: 25.0, caption: 'Sentier sous branche d\u2019arbre · échappée sur la Manche' },
+        { file: 'photos/jour-10/20.jpg', km: 28.0, caption: 'Vue plongeante sur les falaises et la plage · approche de Veules-les-Roses' },
+      ],
+    },
+    { num: 11, from: '', to: '', weather: null, gpx: null, photos: [] },
+    { num: 12, from: '', to: '', weather: null, gpx: null, photos: [] },
+    { num: 13, from: '', to: '', weather: null, gpx: null, photos: [] },
+    { num: 14, from: '', to: '', weather: null, gpx: null, photos: [] },
+    { num: 15, from: '', to: '', weather: null, gpx: null, photos: [] },
+    { num: 16, from: '', to: '', weather: null, gpx: null, photos: [] },
+    { num: 17, from: '', to: '', weather: null, gpx: null, photos: [] },
+    { num: 18, from: '', to: '', weather: null, gpx: null, photos: [] },
+    { num: 19, from: '', to: '', weather: null, gpx: null, photos: [] },
+    { num: 20, from: '', to: '', weather: null, gpx: null, photos: [] },
+    { num: 21, from: 'Étape finale', to: '', weather: null, gpx: null, photos: [] },
+  ],
+};
+
+// Helpers (shared)
+window.TREK_UTIL = {
+  fmtDateLong(date) {
+    const d = new Date(date);
+    const days = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+    const months = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+    return `${days[d.getDay()]} ${d.getDate()} ${months[d.getMonth()]}`;
+  },
+  dateForDay(num) {
+    const d = new Date(window.TREK.startDate);
+    d.setDate(d.getDate() + (num - 1));
+    return d;
+  },
+  weatherIcon(code) {
+    const icons = {
+      sun: { glyph: '☀', label: 'Soleil' },
+      cloud: { glyph: '☁', label: 'Couvert' },
+      mixed: { glyph: '⛅', label: 'Éclaircies' },
+      rain: { glyph: '☂', label: 'Pluie' },
+      shower: { glyph: '🌦', label: 'Averses' },
+      fog: { glyph: '🌫', label: 'Brume' },
+      wind: { glyph: '🍃', label: 'Vent' },
+      storm: { glyph: '⛈', label: 'Orage' },
+    };
+    return icons[code] ?? null;
+  },
+};
