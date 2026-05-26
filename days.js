@@ -7,30 +7,31 @@ window.TREK = {
   // Used to compute weekday names and date labels.
   startDate: '2026-05-05', // Day 1 = mardi 5 mai 2026
 
-  // Palette: 21 distinct, harmonious hues (oklch ~58% L, 0.13 C, evenly spaced).
+  // Palette: 22 distinct, harmonious hues (oklch ~58% L, 0.13 C, evenly spaced).
   // Same lightness across all so no day looks more important than another.
   palette: [
     '#c4544f', // 01 brique
-    '#c4683a', // 02 cuivre
-    '#bf7a1f', // 03 ocre
-    '#b08a1f', // 04 moutarde
-    '#999421', // 05 olive
-    '#7c9826', // 06 mousse
-    '#5e9836', // 07 vert prairie
-    '#459451', // 08 vert sapin
-    '#339067', // 09 jade
-    '#2e8b7c', // 10 sarcelle profonde
-    '#318690', // 11 sarcelle
-    '#3a7e9c', // 12 bleu acier
-    '#4974a7', // 13 bleu manche
-    '#5b69ab', // 14 outremer
-    '#715dab', // 15 violet
-    '#8851a5', // 16 prune
-    '#9c4798', // 17 améthyste
-    '#ad4486', // 18 magenta
-    '#b44671', // 19 framboise
-    '#b54c5b', // 20 grenadine
-    '#b15649', // 21 rouille
+    '#c46836', // 02 cuivre
+    '#bf7920', // 03 ocre
+    '#b08820', // 04 moutarde
+    '#9b9220', // 05 olive
+    '#809627', // 06 mousse
+    '#609835', // 07 vert prairie
+    '#479649', // 08 vert sapin
+    '#329263', // 09 jade
+    '#2e8d78', // 10 sarcelle profonde
+    '#2e878b', // 11 sarcelle
+    '#388099', // 12 bleu acier
+    '#4677a4', // 13 bleu manche
+    '#566cab', // 14 outremer
+    '#6a60ad', // 15 violet
+    '#8254a8', // 16 prune
+    '#984a9c', // 17 améthyste
+    '#aa4589', // 18 magenta
+    '#b44674', // 19 framboise
+    '#b64a5e', // 20 grenadine
+    '#b25347', // 21 rouille
+    '#a76045', // 22 terre brûlée
   ],
 
   days: [
@@ -405,9 +406,41 @@ window.TREK = {
         { file: 'photos/jour-18/16.jpg', km: 36.5, caption: 'Sac à dos & chaussures de marche posés · porte ouverte sur le jardin, Isigny (arrivée)' },
       ],
     },
-    { num: 19, from: '', to: '', weather: null, gpx: null, photos: [] },
-    { num: 20, from: '', to: '', weather: null, gpx: null, photos: [] },
-    { num: 21, from: 'Étape finale', to: '', weather: null, gpx: null, photos: [] },
+    { num: 19, from: 'Isigny-sur-Mer', to: 'Carentan-les-Marais', weather: null, gpx: 'data/19-isigny-carentan.gpx',
+      photos: [
+        { file: 'photos/jour-19/13.jpg', km: 0.1,  caption: 'Longue maison de maître en pierre du Bessin · départ d\u2019Isigny-sur-Mer' },
+        { file: 'photos/jour-19/07.jpg', km: 0.3,  caption: '« Lait Frais · Produit Fermier » · plaque émaillée vintage' },
+        { file: 'photos/jour-19/08.jpg', km: 0.5,  caption: 'Plateau de fromages normands · pont-l\u2019évêque, camembert, livarot, mimolette' },
+        { file: 'photos/jour-19/06.jpg', km: 2.0,  caption: 'Flèche peinte « Beurre Super-Isigny · Lanquetot Camemberts » sur mur de maison' },
+        { file: 'photos/jour-19/04.jpg', km: 6.0,  caption: 'Ferme en pierre du Bessin pavoisée USA, UK, Canada · mémoire du Débarquement' },
+        { file: 'photos/jour-19/12.jpg', km: 9.0,  caption: 'Panneau « département de la Manche » & balise GR 223 sur le poteau' },
+        { file: 'photos/jour-19/05.jpg', km: 12.0, caption: 'Canal de Carentan à la mer · ligne droite vers l\u2019horizon, prés-salés' },
+        { file: 'photos/jour-19/09.jpg', km: 18.0, caption: '« In memory of · Sgt Pilot Raymond Frederick Charles Dean · 1922-1941 » · drapeaux FR & UK' },
+        { file: 'photos/jour-19/03.jpg', km: 22.0, caption: 'Proue de drakkar viking sculptée · port de plaisance de Carentan' },
+        { file: 'photos/jour-19/10.jpg', km: 22.3, caption: 'Voiliers et drapeau normand rouge à 3 léopards · port de Carentan' },
+        { file: 'photos/jour-19/02.jpg', km: 22.5, caption: 'Mât pavoisé du drapeau normand au-dessus d\u2019un vieux gréement' },
+        { file: 'photos/jour-19/11.jpg', km: 23.0, caption: 'Voiliers à quai et drapeau normand · port de plaisance de Carentan' },
+        { file: 'photos/jour-19/01.jpg', km: 23.5, caption: '« Carentan · Les Marais » · lettres géantes à l\u2019entrée de la ville (arrivée)' },
+      ],
+    },
+    { num: 20, from: 'Carentan-les-Marais', to: 'Saint-Marcouf-de-l\u2019Isle', weather: null, gpx: 'data/20-carentan-st-marcouf.gpx',
+      photos: [
+        { file: 'photos/jour-20/12.jpg', km: 0.5,  caption: 'Canal de Carentan au petit matin · alignement d\u2019arbres en contre-jour' },
+        { file: 'photos/jour-20/10.jpg', km: 4.0,  caption: 'Roseaux & canal entre marais · réserve naturelle du Cotentin' },
+        { file: 'photos/jour-20/06.jpg', km: 9.0,  caption: 'Route littorale & « 1944 D-Day » · signalisation touristique de la Manche' },
+        { file: 'photos/jour-20/09.jpg', km: 14.0, caption: '« McGowan Road » · en mémoire du PFC W.F. McGowan, 531st Engr. Shore Regt., tué le 6 juin 1944' },
+        { file: 'photos/jour-20/11.jpg', km: 18.0, caption: '« Utah Beach » · piste cyclable Vélomaritime, balise GR rouge & blanche' },
+        { file: 'photos/jour-20/08.jpg', km: 19.0, caption: 'Casquette « Normandy D-Day · 6th June 1944 » · drapeaux CAN/UK/FR/USA brodés, boutique de souvenirs' },
+        { file: 'photos/jour-20/04.jpg', km: 24.0, caption: 'Coquille Saint-Jacques fraîche échouée sur le sable' },
+        { file: 'photos/jour-20/05.jpg', km: 25.0, caption: 'Parcs à huîtres à marée basse · longues lignes de poches sur tables' },
+        { file: 'photos/jour-20/07.jpg', km: 25.3, caption: 'Poches d\u2019huîtres noires & vertes · perspective filante vers la mer' },
+        { file: 'photos/jour-20/03.jpg', km: 27.5, caption: '« Camping Le Canada *** » · panneau d\u2019entrée face à la mer' },
+        { file: 'photos/jour-20/02.jpg', km: 27.7, caption: 'Tipi en bois à toit double-pente · sac à dos posé, arrivée au camping' },
+        { file: 'photos/jour-20/01.jpg', km: 27.8, caption: 'Intérieur du tipi · deux lits jumeaux, couettes brunes & oreillers' },
+      ],
+    },
+    { num: 21, from: 'Saint-Marcouf-de-l’Isle', to: 'Barfleur', weather: null, gpx: null, photos: [] },
+    { num: 22, from: 'Barfleur', to: 'Cherbourg', weather: null, gpx: null, photos: [] },
   ],
 };
 
