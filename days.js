@@ -439,8 +439,47 @@ window.TREK = {
         { file: 'photos/jour-20/01.jpg', km: 27.8, caption: 'Intérieur du tipi · deux lits jumeaux, couettes brunes & oreillers' },
       ],
     },
-    { num: 21, from: 'Saint-Marcouf-de-l’Isle', to: 'Barfleur', weather: null, gpx: null, photos: [] },
-    { num: 22, from: 'Barfleur', to: 'Cherbourg', weather: null, gpx: null, photos: [] },
+    { num: 21, from: 'Saint-Marcouf-de-l’Isle', to: 'Barfleur', weather: null,
+      date: '2026-05-26', // 1 jour de repos entre l'étape 20 et l'étape 21
+      gpx: 'data/21-st-marcouf-barfleur.gpx',
+      photos: [
+        { file: 'photos/jour-21/04.jpg', km: 0.5,  caption: 'Plage et estran rocheux face à la Manche · départ de Saint-Marcouf' },
+        { file: 'photos/jour-21/12.jpg', km: 1.0,  caption: 'Borne « Sentier Littoral · GR®223 · n°89 · Fontenay-sur-Mer » couverte de lichen' },
+        { file: 'photos/jour-21/05.jpg', km: 4.0,  caption: 'Deux bornes en pierre · accès au sentier littoral entre les dunes' },
+        { file: 'photos/jour-21/07.jpg', km: 6.0,  caption: '« Risque de projection par fortes marées » · panneau et balise FFRandonnée' },
+        { file: 'photos/jour-21/06.jpg', km: 12.0, caption: 'Silhouette de la tour Vauban de Saint-Vaast-la-Hougue à marée basse' },
+        { file: 'photos/jour-21/13.jpg', km: 16.0, caption: 'Tonton souriant entre les casiers Orval · pause épicerie' },
+        { file: 'photos/jour-21/11.jpg', km: 18.0, caption: 'Lodges-bulles transparentes du camping · hébergement insolite' },
+        { file: 'photos/jour-21/10.jpg', km: 18.2, caption: 'Tente-tipi en bois · sac à dos posé à l’entrée' },
+        { file: 'photos/jour-21/09.jpg', km: 18.5, caption: 'Façade peinte « Le Canada » · camping de bord de mer' },
+        { file: 'photos/jour-21/08.jpg', km: 22.0, caption: 'Goéland argenté perché sur un mât de levage · port de Barfleur' },
+        { file: 'photos/jour-21/01.jpg', km: 25.0, caption: 'Phare blanc à toit rouge sur la jetée en pierre · entrée du port de Barfleur' },
+        { file: 'photos/jour-21/03.jpg', km: 25.3, caption: 'Chalutiers bleu/rouge alignés le long du quai · clocher en fond' },
+        { file: 'photos/jour-21/02.jpg', km: 25.5, caption: 'Petites barques colorées échouées et chalutiers · port à marée basse, Barfleur' },
+      ],
+    },
+    { num: 22, from: 'Barfleur', to: 'Cherbourg', weather: null,
+      date: '2026-05-27',
+      gpx: 'data/22-barfleur-cherbourg.gpx',
+      photos: [
+        { file: 'photos/jour-22/05.jpg', km: 0.0,  caption: 'Aube dorée sur le port de Barfleur · clocher fortifié en silhouette · départ' },
+        { file: 'photos/jour-22/06.jpg', km: 0.3,  caption: 'Chambres d\u2019hôtes « Le Conquérant » · maison en granit, rues 16-18 · Barfleur' },
+        { file: 'photos/jour-22/04.jpg', km: 0.6,  caption: 'Vieux gréements alignés au quai · « CH 517599 », couleurs vives' },
+        { file: 'photos/jour-22/03.jpg', km: 0.8,  caption: 'Doris bleu & bateaux traditionnels à quai · marée basse de Barfleur' },
+        { file: 'photos/jour-22/02.jpg', km: 1.0,  caption: 'Filets de pêche orange et beige amoncelés sur le quai' },
+        { file: 'photos/jour-22/01.jpg', km: 2.0,  caption: 'Doris vert à deux mâts & feu blanc de la jetée · sortie du port' },
+        { file: 'photos/jour-22/17.jpg', km: 5.0,  caption: 'Phare de Gatteville et la vieille tour-vigie vus du sentier littoral' },
+        { file: 'photos/jour-22/16.jpg', km: 5.5,  caption: 'Phare de Gatteville · 75 m de granit, 2e plus haut phare d\u2019Europe' },
+        { file: 'photos/jour-22/10.jpg', km: 12.0, caption: 'Côte rocheuse & sémaphore blanc au loin · pointe du Cotentin' },
+        { file: 'photos/jour-22/11.jpg', km: 18.0, caption: 'Pose triomphale bras grands ouverts · t-shirt jaune sur la lande rocheuse 🌞' },
+        { file: 'photos/jour-22/12.jpg', km: 18.5, caption: 'Portrait en contre-plongée · chapeau et barbe blanche sous ciel bleu' },
+        { file: 'photos/jour-22/15.jpg', km: 24.0, caption: 'Plage sauvage & estran sablonneux · vers Fermanville / Cap Lévi' },
+        { file: 'photos/jour-22/13.jpg', km: 26.0, caption: 'Plage de sable, coquillages et ourlet d\u2019écume · soleil de mai' },
+        { file: 'photos/jour-22/09.jpg', km: 32.0, caption: 'Plage de Cherbourg · voiles fluo des optimists & fort de l\u2019Île Pelée 🎏' },
+        { file: 'photos/jour-22/08.jpg', km: 34.5, caption: '« Le Parapluie de Cherbourg » · boutique & manufacture, parapluie lavande au mur' },
+        { file: 'photos/jour-22/07.jpg', km: 35.5, caption: 'Gare de Cherbourg-en-Cotentin · arrivée finale du GR 223 🏁' },
+      ],
+    },
   ],
 };
 
@@ -453,6 +492,9 @@ window.TREK_UTIL = {
     return `${days[d.getDay()]} ${d.getDate()} ${months[d.getMonth()]}`;
   },
   dateForDay(num) {
+    // Look for an explicit date override on the day entry first
+    const day = window.TREK.days.find((x) => x.num === num);
+    if (day && day.date) return new Date(day.date);
     const d = new Date(window.TREK.startDate);
     d.setDate(d.getDate() + (num - 1));
     return d;
