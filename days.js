@@ -478,6 +478,8 @@ window.TREK = {
         { file: 'photos/jour-22/09.jpg', km: 32.0, caption: 'Plage de Cherbourg · voiles fluo des optimists & fort de l\u2019Île Pelée 🎏' },
         { file: 'photos/jour-22/08.jpg', km: 34.5, caption: '« Le Parapluie de Cherbourg » · boutique & manufacture, parapluie lavande au mur' },
         { file: 'photos/jour-22/07.jpg', km: 35.5, caption: 'Gare de Cherbourg-en-Cotentin · arrivée finale du GR 223 🏁' },
+        { file: 'photos/jour-22/18.jpg', km: 35.6, caption: 'Bras grands ouverts devant la gare de Cherbourg-en-Cotentin · 791 km accomplis 🙌' },
+        { file: 'photos/jour-22/19.jpg', km: 35.9, caption: 'Le retour · même geste de victoire devant la gare de Bruxelles-Midi 🇧🇪' },
       ],
     },
   ],
